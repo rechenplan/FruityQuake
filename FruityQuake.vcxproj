@@ -196,6 +196,63 @@
     <ClCompile Include="src\world.c" />
     <ClCompile Include="src\zone.c" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\anorms.h" />
+    <ClInclude Include="src\anorm_dots.h" />
+    <ClInclude Include="src\bspfile.h" />
+    <ClInclude Include="src\cdaudio.h" />
+    <ClInclude Include="src\client.h" />
+    <ClInclude Include="src\cmd.h" />
+    <ClInclude Include="src\common.h" />
+    <ClInclude Include="src\conproc.h" />
+    <ClInclude Include="src\console.h" />
+    <ClInclude Include="src\crc.h" />
+    <ClInclude Include="src\cvar.h" />
+    <ClInclude Include="src\dosisms.h" />
+    <ClInclude Include="src\draw.h" />
+    <ClInclude Include="src\d_iface.h" />
+    <ClInclude Include="src\glquake.h" />
+    <ClInclude Include="src\gl_model.h" />
+    <ClInclude Include="src\gl_warp_sin.h" />
+    <ClInclude Include="src\input.h" />
+    <ClInclude Include="src\keys.h" />
+    <ClInclude Include="src\mathlib.h" />
+    <ClInclude Include="src\menu.h" />
+    <ClInclude Include="src\model.h" />
+    <ClInclude Include="src\modelgen.h" />
+    <ClInclude Include="src\net.h" />
+    <ClInclude Include="src\net_dgrm.h" />
+    <ClInclude Include="src\net_loop.h" />
+    <ClInclude Include="src\net_ser.h" />
+    <ClInclude Include="src\net_vcr.h" />
+    <ClInclude Include="src\net_wins.h" />
+    <ClInclude Include="src\net_wipx.h" />
+    <ClInclude Include="src\progdefs.h" />
+    <ClInclude Include="src\progs.h" />
+    <ClInclude Include="src\protocol.h" />
+    <ClInclude Include="src\pr_comp.h" />
+    <ClInclude Include="src\quakedef.h" />
+    <ClInclude Include="src\render.h" />
+    <ClInclude Include="src\resource.h" />
+    <ClInclude Include="src\r_local.h" />
+    <ClInclude Include="src\r_shared.h" />
+    <ClInclude Include="src\sbar.h" />
+    <ClInclude Include="src\screen.h" />
+    <ClInclude Include="src\server.h" />
+    <ClInclude Include="src\sound.h" />
+    <ClInclude Include="src\spritegn.h" />
+    <ClInclude Include="src\sys.h" />
+    <ClInclude Include="src\vid.h" />
+    <ClInclude Include="src\view.h" />
+    <ClInclude Include="src\wad.h" />
+    <ClInclude Include="src\winquake.h" />
+    <ClInclude Include="src\world.h" />
+    <ClInclude Include="src\zone.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\progdefs.q1" />
+    <None Include="src\progdefs.q2" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
