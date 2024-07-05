@@ -85,10 +85,6 @@ void PerpendicularVector( vec3_t dst, const vec3_t src )
 	VectorNormalize( dst );
 }
 
-
-#pragma optimize( "", off )
-
-
 void RotatePointAroundVector( vec3_t dst, const vec3_t dir, const vec3_t point, float degrees )
 {
 	float	m[3][3];
@@ -144,10 +140,7 @@ void RotatePointAroundVector( vec3_t dst, const vec3_t dir, const vec3_t point, 
 	}
 }
 
-#pragma optimize( "", on )
-
 /*-----------------------------------------------------------------*/
-
 
 float	anglemod(float a)
 {
