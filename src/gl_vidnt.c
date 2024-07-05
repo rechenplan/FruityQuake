@@ -574,7 +574,6 @@ int		texture_mode = GL_LINEAR;
 
 int		texture_extension_number = 1;
 
-#ifdef _WIN32
 void CheckMultiTextureExtensions(void) 
 {
 	if (strstr(gl_extensions, "GL_SGIS_multitexture ") && !COM_CheckParm("-nomtex")) {
@@ -584,12 +583,6 @@ void CheckMultiTextureExtensions(void)
 		gl_mtexable = true;
 	}
 }
-#else
-void CheckMultiTextureExtensions(void) 
-{
-		gl_mtexable = true;
-}
-#endif
 
 /*
 ===============
@@ -638,16 +631,6 @@ void GL_Init (void)
 
 //	glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
 	glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_REPLACE);
-
-#if 0
-	CheckArrayExtensions ();
-
-	glEnable (GL_VERTEX_ARRAY_EXT);
-	glEnable (GL_TEXTURE_COORD_ARRAY_EXT);
-	glVertexPointerEXT (3, GL_FLOAT, 0, 0, &glv.x);
-	glTexCoordPointerEXT (2, GL_FLOAT, 0, 0, &glv.s);
-	glColorPointerEXT (3, GL_FLOAT, 0, 0, &glv.r);
-#endif
 }
 
 /*

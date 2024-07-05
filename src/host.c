@@ -67,11 +67,7 @@ cvar_t	teamplay = {"teamplay","0",false,true};
 cvar_t	samelevel = {"samelevel","0"};
 cvar_t	noexit = {"noexit","0",false,true};
 
-#ifdef QUAKE2
-cvar_t	developer = {"developer","1"};	// should be 0 for release!
-#else
 cvar_t	developer = {"developer","0"};
-#endif
 
 cvar_t	skill = {"skill","1"};						// 0 - 3
 cvar_t	deathmatch = {"deathmatch","0"};			// 0, 1, or 2
@@ -549,54 +545,6 @@ Host_ServerFrame
 
 ==================
 */
-#ifdef FPS_20
-
-void _Host_ServerFrame (void)
-{
-// run the world state	
-	pr_global_struct->frametime = host_frametime;
-
-// read client messages
-	SV_RunClients ();
-	
-// move things around and think
-// always pause in single player if in console or menus
-	if (!sv.paused && (svs.maxclients > 1 || key_dest == key_game) )
-		SV_Physics ();
-}
-
-void Host_ServerFrame (void)
-{
-	float	save_host_frametime;
-	float	temp_host_frametime;
-
-// run the world state	
-	pr_global_struct->frametime = host_frametime;
-
-// set the time and clear the general datagram
-	SV_ClearDatagram ();
-	
-// check for new clients
-	SV_CheckForNewClients ();
-
-	temp_host_frametime = save_host_frametime = host_frametime;
-	while(temp_host_frametime > (1.0/72.0))
-	{
-		if (temp_host_frametime > 0.05)
-			host_frametime = 0.05;
-		else
-			host_frametime = temp_host_frametime;
-		temp_host_frametime -= host_frametime;
-		_Host_ServerFrame ();
-	}
-	host_frametime = save_host_frametime;
-
-// send all messages to the clients
-	SV_SendClientMessages ();
-}
-
-#else
-
 void Host_ServerFrame (void)
 {
 // run the world state	
@@ -619,9 +567,6 @@ void Host_ServerFrame (void)
 // send all messages to the clients
 	SV_SendClientMessages ();
 }
-
-#endif
-
 
 /*
 ==================
@@ -882,32 +827,15 @@ void Host_Init (quakeparms_t *parms)
 		if (!host_colormap)
 			Sys_Error ("Couldn't load gfx/colormap.lmp");
 
-#ifndef _WIN32 // on non win32, mouse comes before video for security reasons
-		IN_Init ();
-#endif
 		VID_Init (host_basepal);
-
 		Draw_Init ();
 		SCR_Init ();
 		R_Init ();
-#ifndef	_WIN32
-	// on Win32, sound initialization has to come before video initialization, so we
-	// can put up a popup if the sound hardware is in use
 		S_Init ();
-#else
-
-#ifdef	GLQUAKE
-	// FIXME: doesn't use the new one-window approach yet
-		S_Init ();
-#endif
-
-#endif	// _WIN32
 		CDAudio_Init ();
 		Sbar_Init ();
 		CL_Init ();
-#ifdef _WIN32 // on non win32, mouse comes before video for security reasons
 		IN_Init ();
-#endif
 	}
 
 	Cbuf_InsertText ("exec quake.rc\n");
