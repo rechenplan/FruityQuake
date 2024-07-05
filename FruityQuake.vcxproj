@@ -22,9 +22,9 @@
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
     <ProjectGuid>{1124f78c-c3f6-4c1f-bcdd-2267c58933f7}</ProjectGuid>
-    <RootNamespace>GLQuake</RootNamespace>
+    <RootNamespace>FruityQuake</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>GLQuake</ProjectName>
+    <ProjectName>FruityQuake</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

@@ -233,7 +233,7 @@ qboolean VID_SetWindowedMode (int modenum)
 	dibwindow = CreateWindowEx (
 		 ExWindowStyle,
 		 "WinQuake",
-		 "GLQuake",
+		 "FruityQuake",
 		 WindowStyle,
 		 rect.left, rect.top,
 		 width,
