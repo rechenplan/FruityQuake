@@ -242,9 +242,6 @@
     <ClInclude Include="..\src\d_iface.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\dosisms.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\src\draw.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -299,9 +296,6 @@
     <ClInclude Include="..\src\pr_comp.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\progdefs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\src\progs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -309,12 +303,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\src\quakedef.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\r_local.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\r_shared.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\src\render.h">
@@ -359,13 +347,8 @@
     <ClInclude Include="..\src\zone.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="src\progdefs.q1">
+    <ClInclude Include="..\src\progdefs.h">
       <Filter>Header Files</Filter>
-    </None>
-    <None Include="src\progdefs.q2">
-      <Filter>Header Files</Filter>
-    </None>
+    </ClInclude>
   </ItemGroup>
 </Project>
