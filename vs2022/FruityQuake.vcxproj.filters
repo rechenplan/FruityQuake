@@ -120,9 +120,6 @@
     <ClCompile Include="..\src\snd_win.c">
       <Filter>Source Files\snd</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\sys_win.c">
-      <Filter>Source Files\sv</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\sv_main.c">
       <Filter>Source Files\sv</Filter>
     </ClCompile>
@@ -202,6 +199,9 @@
       <Filter>Source Files\misc</Filter>
     </ClCompile>
     <ClCompile Include="..\src\zone.c">
+      <Filter>Source Files\misc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sys_win.c">
       <Filter>Source Files\misc</Filter>
     </ClCompile>
   </ItemGroup>
